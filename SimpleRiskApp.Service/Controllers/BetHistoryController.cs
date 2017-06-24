@@ -1,24 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SimpleRiskApp.Business;
 
 namespace SimpleRiskApp.Service.Controllers
 {
     [Route("api/[controller]")]
     public class BetHistoryController : Controller
     {
-        public BetHistoryController()
+        private IBetHistoryLogic _betHistoryLogic;
+        public BetHistoryController(IBetHistoryLogic betHistoryLogic)
         {
-
+            _betHistoryLogic = betHistoryLogic;
         }
 
         // GET api/bethistory
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                var betHistory = _betHistoryLogic.GetBetHistory().GetAwaiter().GetResult();
+
+                if (betHistory == null)
+                {
+                    return BadRequest("Failed to get Bet History.");
+                }
+
+                return Json(betHistory);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
     }

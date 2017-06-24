@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SimpleRiskApp.Business\SimpleRiskApp.Business.csproj" />
     <ProjectReference Include="..\SimpleRiskApp.Common\SimpleRiskApp.Common.csproj" />
     <ProjectReference Include="..\SimpleRiskApp.Service\SimpleRiskApp.Service.csproj" />
   </ItemGroup>
