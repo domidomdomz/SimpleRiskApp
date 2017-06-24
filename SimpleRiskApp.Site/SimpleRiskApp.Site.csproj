@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\js\betHistory.js" />
     <Content Include="wwwroot\js\index.js" />
   </ItemGroup>
   <ItemGroup>

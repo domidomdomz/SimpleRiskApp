@@ -37,6 +37,13 @@ namespace SimpleRiskApp.Service
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddSingleton<IHttpClientHelper, HttpClientHelper>();
             services.AddSingleton<IJsonMapper, JsonMapper>();
+
+            services.AddCors(o => o.AddPolicy("AllowAnyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

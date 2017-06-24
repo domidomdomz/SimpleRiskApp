@@ -1,9 +1,11 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using SimpleRiskApp.Business;
+using Microsoft.AspNetCore.Cors;
 
 namespace SimpleRiskApp.Service.Controllers
 {
+    [EnableCors("AllowAnyPolicy")]
     [Route("api/[controller]")]
     public class BetHistoryController : Controller
     {
