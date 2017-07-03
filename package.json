@@ -1,0 +1,25 @@
+{
+  "name": "simple-risk-app",
+  "version": "1.0.0",
+  "description": "Simple Risk App with very, very basic react.js :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domidomdomz/SimpleRiskApp.git"
+  },
+  "author": "Domz Ciriaco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domidomdomz/SimpleRiskApp/issues"
+  },
+  "homepage": "https://github.com/domidomdomz/SimpleRiskApp#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.0",
+    "webpack": "^3.0.0"
+  }
+}

@@ -9,8 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\js\betHistory.js" />
-    <Content Include="wwwroot\js\index.js" />
+    <Content Include="wwwroot\src\client\app\BetHistory.jsx" />
+    <Content Include="wwwroot\src\client\app\BetHistoryItem.jsx" />
+    <Content Include="wwwroot\src\client\app\CustomerBetHistory.jsx" />
+    <Content Include="wwwroot\src\client\app\CustomerBetHistoryItem.jsx" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
@@ -22,6 +24,10 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\src\client\app\Index.jsx" />
+    <None Include="wwwroot\src\client\public\bundle.js" />
   </ItemGroup>
 
 </Project>
